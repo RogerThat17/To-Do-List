@@ -55,6 +55,17 @@ app.post("/", function(request, response) {
     }
 });
 
+app.post("/delete", function(request, response) {
+
+    var item = request.body.newItem;
+
+    console.log(item);
+
+    itemList.splice(itemList.indexOf(item), 1);
+
+    response.redirect("/");
+});
+
 app.get("/work", function(request, response) {
     response.render("list", {listType: "Work List", newItem: workList});
 });

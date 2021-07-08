@@ -23,11 +23,16 @@ h1 {
   text-align: center;
 }
 
-.item {
+.item,
+.list-item {
   min-height: 70px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #F1F1F1;
+}
+
+.list-item {
+  justify-content: center;
 }
 
 .item:last-child {
