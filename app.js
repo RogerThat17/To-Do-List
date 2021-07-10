@@ -57,13 +57,24 @@ app.post("/", function(request, response) {
 
 app.post("/delete", function(request, response) {
 
-    var item = request.body.newItem;
+    var obj = request.body.obj;
 
-    console.log(item);
+    obj = obj.split(",");
 
-    itemList.splice(itemList.indexOf(item), 1);
+    var list_type = obj[0];
 
-    response.redirect("/");
+    var item = obj[1];
+
+    if (list_type === "Work List") {
+        workList.splice(workList.indexOf(item), 1);
+
+        response.redirect("/work");
+    }
+    else {
+        itemList.splice(itemList.indexOf(item), 1);
+
+        response.redirect("/");
+    }
 });
 
 app.get("/work", function(request, response) {

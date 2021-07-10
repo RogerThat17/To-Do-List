@@ -73,6 +73,20 @@ button {
   border-width: 0;
 }
 
+a {
+  text-decoration: none;
+  margin: 1rem;
+  padding: 0 1rem;
+  min-height: 50px;
+  width: 50px;
+  border-radius: 25%;
+  border-color: transparent;
+  color: #333;
+  font-size: 30px;
+  border-width: 0;
+  background-color: #fff;
+}
+
 input[type="text"] {
   text-align: center;
   height: 60px;
